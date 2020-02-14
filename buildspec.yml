@@ -12,7 +12,7 @@ phases:
       - apt-get update -y
       - apt-get install -y maven
     finally:
-      - echo This always runs even if the update or install command fails 
+      - echo This always runs even if the update or install command fails.
   build:
     commands:
       - echo Entered the build phase...
