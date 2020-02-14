@@ -27,17 +27,6 @@ phases:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
 
-reports:
-  report-group-name-1:
-    files:
-      - "**/*"
-    base-directory: 'target/tests/reports'
-    discard-paths: no
-  reportGroupCucumberJson:
-    files:
-      - 'cucumber/target/cucumber-tests.xml'
-    discard-paths: yes
-    file-format: CucumberJson # default is JunitXml
 artifacts:
   files:
     - target/abc.txt
