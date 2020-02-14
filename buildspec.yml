@@ -17,7 +17,9 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - echo Build started on `date`
+      - mkdir target
+      - chmod 777 target
+      - echo "hello" >> target/abc.txt
     finally:
       - echo This always runs even if the install command fails
   post_build:
@@ -38,16 +40,16 @@ reports:
     file-format: CucumberJson # default is JunitXml
 artifacts:
   files:
-    - target/messageUtil-1.0.jar
+    - target/abc.txt
   discard-paths: yes
   secondary-artifacts:
     artifact1:
       files:
-        - target/messageUtil-1.0.jar
+        - target/abc.txt
       discard-paths: yes
     artifact2:
       files:
-        - target/messageUtil-1.0.jar
+        - target/abc.txt
       discard-paths: yes
 cache:
   paths:
