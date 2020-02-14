@@ -21,7 +21,7 @@ phases:
       - chmod 777 target
       - echo "hello" >> target/abc.txt
     finally:
-      - echo This always runs even if the install command fails
+      - echo This always runs even if the install command fails.
   post_build:
     commands:
       - echo Entered the post_build phase...
