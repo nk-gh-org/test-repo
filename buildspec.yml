@@ -20,6 +20,7 @@ phases:
       - mkdir target
       - chmod 777 target
       - echo "hello" >> target/abc.txt
+      - echo "hi" >> target/hi.txt
     finally:
       - echo This always runs even if the install command fails.
   post_build:
@@ -35,10 +36,12 @@ artifacts:
     artifact1:
       files:
         - target/abc.txt
+        - target/hi.txt
       discard-paths: yes
     artifact2:
       files:
         - target/abc.txt
+        - target/hi.txt
       discard-paths: yes
 cache:
   paths:
